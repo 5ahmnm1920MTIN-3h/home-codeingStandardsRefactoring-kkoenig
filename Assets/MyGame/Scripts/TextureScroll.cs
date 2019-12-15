@@ -6,7 +6,7 @@ public class TextureScroll : MonoBehaviour
 {
 
     public float scrollSpeed;
-    public bool scroll = true;
+    public bool scrollBackground = true;
 
     Material backgroundMaterial;
 
@@ -30,7 +30,7 @@ public class TextureScroll : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (scroll)
+        if (scrollBackground)
         {
             Vector2 offset = new Vector2(scrollSpeed * Time.time, 0f);
 

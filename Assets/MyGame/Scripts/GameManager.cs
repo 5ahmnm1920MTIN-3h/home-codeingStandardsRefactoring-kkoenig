@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        ObstacleSpawner.instance.gameOver = true;
+        ObstacleSpawner.instance.isGameOver = true;
         StopScrolling();
         gameOverPanel.SetActive(true);
     }
@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
 
         foreach(TextureScroll item in scrollingObjects)
         {
-            item.scroll = false;
+            item.scrollBackground = false;
             Debug.Log(item.name);
         }
     }

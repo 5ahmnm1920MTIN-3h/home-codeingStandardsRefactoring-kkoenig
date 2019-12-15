@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
-Rigidbody2D rb;
+Rigidbody2D rigidbodyObstacle;
 [SerializeField] private float MoveSpeed;
 
 private void Awake()
 {
-    rb = GetComponent<Rigidbody2D>();
+    rigidbodyObstacle = GetComponent<Rigidbody2D>();
 }
 
 // Start is called before the first frame update
@@ -39,7 +39,7 @@ void Update()
 private void FixedUpdate()
 {
 
-    rb.velocity = Vector2.left * MoveSpeed;
+    rigidbodyObstacle.velocity = Vector2.left * MoveSpeed;
 
 }
 }
