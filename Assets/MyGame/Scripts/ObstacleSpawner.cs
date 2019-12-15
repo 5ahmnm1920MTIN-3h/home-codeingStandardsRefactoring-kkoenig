@@ -7,6 +7,8 @@ public class ObstacleSpawner : MonoBehaviour
     public GameObject[] obstacles;
     public bool isGameOver = false;
     public float minSpawnTime, maxSpawnTime;
+    const string coroutineSpawmKeyword = "Spawn";
+    const float defaultWaitTime = 1f;
 
     private void Awake()
     {
@@ -19,12 +21,12 @@ public class ObstacleSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine("Spawn");
+        StartCoroutine(coroutineSpawmKeyword);
     }
 
     IEnumerator Spawn()
     {
-        float waitTime = 1f;
+        float waitTime = defaultWaitTime;
         yield return new WaitForSeconds (waitTime);
 
         while (!isGameOver)

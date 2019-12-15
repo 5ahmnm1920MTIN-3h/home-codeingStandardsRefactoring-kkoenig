@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuController : MonoBehaviour{
+public class MenuController : MonoBehaviour
+{
+    const string mainSceneKeyword = "MainScene";
     public void Play()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene(mainSceneKeyword);
     }
 
     public void Exit()
