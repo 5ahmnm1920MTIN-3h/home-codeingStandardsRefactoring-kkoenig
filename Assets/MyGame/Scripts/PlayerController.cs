@@ -38,7 +38,6 @@ public class PlayerController : MonoBehaviour
         rigidbodySanta.velocity = Vector2.up * jumpForce;
         animator.SetTrigger(jumpAnimationKeyword);
         GameManager.instance.IncrementScore();
-        Debug.Log("DeleteMe");
     }
 
     private bool SetGameOverTrue()

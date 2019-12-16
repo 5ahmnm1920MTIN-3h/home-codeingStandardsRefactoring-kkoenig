@@ -20,18 +20,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Called before the first frame update,  shows current state in console
-    void Start()
-    {
-        Debug.Log("in Start");   
-    }
-
-    // Called once per frame, shows current state in console
-    void Update()
-    {
-        Debug.Log("in Update");
-    }
-
     // Called on GameOver, calls StopScrolling, stops obstacle spawning and activates gameover panel
     public void GameOver()
     {
