@@ -10,16 +10,16 @@ public class PlayerController : MonoBehaviour
     const string santaDeathAnimationKeyword = "SantaDeath";
     const string groundObjectTag = "Ground";
     const string obstacleObjectTag = "Obstacle";
-
     [SerializeField] float jumpForce;
     
+    // Called once on gamestart, sets Player animation and rigidbody
     private void Awake()
     {
         rigidbodySanta = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
+    // Called once per frame, calles jump methode if isGrounded is true
     void Update()
     {
         if (Input.GetMouseButton(0) && !isGameOver)
@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // Called when isGrounded is true, starts jumpevent
     void jump()
     {
         isGrounded = false;
@@ -45,6 +46,7 @@ public class PlayerController : MonoBehaviour
         return true;
     }
 
+    // Called on CollisionEnter with gameObject, if gameObject has groundobject Tag isGrounded is set true
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == groundObjectTag)
@@ -53,6 +55,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // Called on TriggerEnter with Obstacles, sets GameOverEvent
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == obstacleObjectTag)

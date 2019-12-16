@@ -10,6 +10,7 @@ public class ObstacleSpawner : MonoBehaviour
     const string coroutineSpawmKeyword = "Spawn";
     const float defaultWaitTime = 1f;
 
+    //  // Called once on Gamestart, sets instance variable
     private void Awake()
     {
         if (instance == null)
@@ -18,12 +19,13 @@ public class ObstacleSpawner : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
+    // Start is called before the first frame update, starts coroutine
     void Start()
     {
         StartCoroutine(coroutineSpawmKeyword);
     }
-
+ 
+    // Called once per frame, spawns obstacles with random timegap
     IEnumerator Spawn()
     {
         float waitTime = defaultWaitTime;
@@ -37,6 +39,7 @@ public class ObstacleSpawner : MonoBehaviour
         }
     }
 
+    // Called by IEnumerator Spawn, choosing random distances and elements of obstacles
     void SpawnObstacle()
     {
         int randomPosition = Random.Range(0, obstacles.Length);
