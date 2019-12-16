@@ -10,9 +10,4 @@ public class MenuController : MonoBehaviour
     {
         SceneManager.LoadScene(mainSceneKeyword);
     }
-
-    public void Exit()
-    {
-        Application.Quit();
-    }
 }
