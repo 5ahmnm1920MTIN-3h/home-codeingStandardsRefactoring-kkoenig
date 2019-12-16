@@ -129,7 +129,7 @@ public int Add(int x, int y, int z)
 }
 ```
 ### 10. Tiefe Verschachtelungen
-Zu tiefe Verschachtelungen führen zu Verwirrtheit und Unverständlichkeit.
+Zu tiefe Verschachtelungen führen zu Verwirrung und Unverständlichkeit.
 ```c#
 do 
 {   
