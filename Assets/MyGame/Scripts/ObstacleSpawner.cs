@@ -25,7 +25,7 @@ public class ObstacleSpawner : MonoBehaviour
         StartCoroutine(coroutineSpawmKeyword);
     }
  
-    // Called once per frame, spawns obstacles with random timegap
+    // Spawns obstacles with random timegap
     IEnumerator Spawn()
     {
         float waitTime = defaultWaitTime;
