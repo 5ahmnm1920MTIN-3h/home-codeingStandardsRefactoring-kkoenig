@@ -54,16 +54,16 @@ Die Funktionen einer Methode sollen leicht verständlich, lesbar und ausbesserba
 ```c#
 public void SetResult()
 {
-float a = float.Parse(ip_varA.text);
-float b = float.Parse(ip_varB.text);
-result.text = AddNumbers(a, b).ToString();
-ip_varA.interactable = false;
-ip_varB.interactable = false;
-ip_varC.interactable = false;
-ip_varD.interactable = false;
-Btn_Add.interactable = false;
-Btn_Reset.interactable = true;
-Debug.Log (“Reset Btn pressed”)
+	float a = float.Parse(ip_varA.text);
+	float b = float.Parse(ip_varB.text);
+	result.text = AddNumbers(a, b).ToString();
+	ip_varA.interactable = false;
+	ip_varB.interactable = false;
+	ip_varC.interactable = false;
+	ip_varD.interactable = false;
+	Btn_Add.interactable = false;
+	Btn_Reset.interactable = true;
+	Debug.Log (“Reset Btn pressed”)
 }
 ```
 ### 3. Zu komplexe/verwirrende Namensgebung
@@ -75,7 +75,7 @@ public void retTheresult(){}
 ### 4. Zu lange Namensgebung
 Um Zeit und Verwirrung zu sparen sollten die vergebenen Namen immer relativ kurz und aussagekräftig sein.
 ```c#
-public string = thisVariableIsAStringAndIsItsNameIsMaybeABitTooLong
+public string = thisVariableIsAStringAndIsItsNameIsMaybeABitTooLong;
 ```
 ### 5. Zu kurze Namensgebung
 Auch zu kurze Namen können zu Unklarheit führen und sollten vermieden werden. 
@@ -102,13 +102,14 @@ protected void SetBlueBoxVisibility(bool blueBoxVisibility)
         ShowRedBoxPanel(redBoxVisibility);
         RaiseStatusUpdated();
     }
-``
+```
 ### 7. Unbenutzte NameSpaces
 Unnötige NameSpaces sollten möglichst gelöscht werden, um Verwirrung und Probleme zu vermeiden. 
 ```c#
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using System.Collections;
 ``` 
 ### 8. Unerreichbarer Code
 Unbenutzer Code verschwendet Rechenzeit und Speicher.
@@ -135,30 +136,32 @@ do
     statement(s);
     do 
     {  
-       statement(s);
-	    do
-	    {
-		statement(s)
-	    }
+        statement(s);
+        do
+	{
+	    statement(s)
+	}
+	while(condition);
     }
-       while(condition);
+    while(condition);
 }
+while(condition);
 ```
 Copyright by Kathrin König
 
 # README
-### Development Platform
+## Development Platform
 - Windows 10 1909
 - Unity Version: 2019.1.14f1
 - Visual Studio Version: Visual Studio Community 2019 16.3.10
 - Scripting Runtime Version: .NET 4.x Equivalent
 - API Compatibility Level: .NET Standard 2.0
 
-### Testcase
+## Testcase
 - Spiel starten
 - über Hindernisse springen
 - gegen ein Hinderniss laufen
 - auf Restart klicken
 
-### Game 
+## Game 
 Copyright: smeerws
