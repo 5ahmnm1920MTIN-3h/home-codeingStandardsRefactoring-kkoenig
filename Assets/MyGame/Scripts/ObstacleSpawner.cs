@@ -20,7 +20,7 @@ public class ObstacleSpawner : MonoBehaviour
     }
 
     // Start is called before the first frame update, starts coroutine
-    void Start()
+    private void Start()
     {
         StartCoroutine(coroutineSpawmKeyword);
     }
@@ -39,7 +39,7 @@ public class ObstacleSpawner : MonoBehaviour
     }
 
     // Called by IEnumerator Spawn, choosing random distances and elements of obstacles
-    void SpawnObstacle()
+    private void SpawnObstacle()
     {
         int randomPosition = Random.Range(0, obstacles.Length);
         Instantiate(obstacles[randomPosition], transform.position, Quaternion.identity);

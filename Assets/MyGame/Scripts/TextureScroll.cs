@@ -4,7 +4,7 @@ public class TextureScroll : MonoBehaviour
 {
     public float scrollSpeed;
     public bool scrollBackground = true;
-    Material backgroundMaterial;
+    private Material backgroundMaterial;
 
     // Called once on gamestart, sets backgroundmaterial
     private void Awake()

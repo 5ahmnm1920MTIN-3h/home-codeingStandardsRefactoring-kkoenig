@@ -155,7 +155,7 @@ MonoBehaviour:
   - {fileID: 4165715350967558906, guid: 96d2743541ddb1846a6fd19d0e26d952, type: 3}
   - {fileID: 1557792003141734171, guid: e97900592fb216b4aa2adcde80a9054e, type: 3}
   - {fileID: 8412382045849161300, guid: 3e92429c9dc65944bb2f4ec05f387319, type: 3}
-  gameOver: 0
+  isGameOver: 0
   minSpawnTime: 1.2
   maxSpawnTime: 2.5
 --- !u!4 &34536265
@@ -572,7 +572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: 7
-  scroll: 1
+  scrollBackground: 1
 --- !u!23 &722366341
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5831,7 +5831,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: 7
-  scroll: 1
+  scrollBackground: 1
 --- !u!23 &1201583959
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6478,7 +6478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: 0.2
-  scroll: 1
+  scrollBackground: 1
 --- !u!1 &2002092081
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,15 +2,15 @@
 
 public class PlayerController : MonoBehaviour
 {
-    Rigidbody2D rigidbodySanta;
-    Animator animator;
-    bool isGrounded;
-    bool isGameOver = false;
+    private Rigidbody2D rigidbodySanta;
+    private Animator animator;
+    private bool isGrounded;
+    private bool isGameOver = false;
     const string jumpAnimationKeyword = "Jump";
     const string santaDeathAnimationKeyword = "SantaDeath";
     const string groundObjectTag = "Ground";
     const string obstacleObjectTag = "Obstacle";
-    [SerializeField] float jumpForce;
+    [SerializeField] private float jumpForce;
     
     // Called once on gamestart, sets Player animation and rigidbody
     private void Awake()
@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Called once per frame, calles jump methode if isGrounded is true
-    void Update()
+    private void Update()
     {
         if (Input.GetMouseButton(0) && !isGameOver)
         {
@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Called when isGrounded is true, starts jumpevent
-    void Jump()
+    private void Jump()
     {
         isGrounded = false;
         rigidbodySanta.velocity = Vector2.up * jumpForce;

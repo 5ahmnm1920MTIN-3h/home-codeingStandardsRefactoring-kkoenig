@@ -2,9 +2,10 @@
 
 public class Obstacle : MonoBehaviour
 {
-    Rigidbody2D rigidbodyObstacle;
+    private Rigidbody2D rigidbodyObstacle;
     [SerializeField] private float MoveSpeed;
-    const float obstacleDestroyBoundary = 15f;
+    const float leftBoundary = -15f;
+    const float rightBoundary = 15f;
 
     // Called once on gamestart, sets rigidbody of obstacles
     private void Awake()
@@ -13,15 +14,15 @@ public class Obstacle : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        //if obstacle's position x is < -15f it will be destroyed
-        if (transform.position.x < -obstacleDestroyBoundary)
+    private void Update()
+    {   
+        //if obstacle's position x is > 15f it will be destroyed
+        if (transform.position.x > rightBoundary)
         {
             Destroy(gameObject);
         }
-        //if obstacle's position x is > 15f it will be destroyed
-        else if (transform.position.x > obstacleDestroyBoundary)
+        //if obstacle's position x is < -15f it will be destroyed
+        else if (transform.position.x < leftBoundary)
         {
             Destroy(gameObject);
         }

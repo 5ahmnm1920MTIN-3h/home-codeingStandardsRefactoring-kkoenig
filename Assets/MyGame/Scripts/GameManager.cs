@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public GameObject gameOverPanel;
     public Text scoreText;
-    int score = 0;
+    private int score = 0;
     const string mainSceneKeyword = "MainScene";
     const string menuSceneKeyword = "MenuScene";
 
@@ -29,14 +29,13 @@ public class GameManager : MonoBehaviour
     }
 
     // Called if GameOver is true, stops background scrolling
-    void StopScrolling()
+    private void StopScrolling()
     {
         TextureScroll[] scrollingObjects = FindObjectsOfType<TextureScroll>();
 
         foreach(TextureScroll item in scrollingObjects)
         {
             item.scrollBackground = false;
-            Debug.Log(item.name);
         }
     }
 
