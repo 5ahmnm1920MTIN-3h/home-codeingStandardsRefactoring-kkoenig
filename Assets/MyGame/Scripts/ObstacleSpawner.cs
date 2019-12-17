@@ -30,7 +30,6 @@ public class ObstacleSpawner : MonoBehaviour
     {
         float waitTime = defaultWaitTime;
         yield return new WaitForSeconds (waitTime);
-
         while (!isGameOver)
         {
             SpawnObstacle();
